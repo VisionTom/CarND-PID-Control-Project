@@ -17,7 +17,16 @@ This graph from Sebastian's course visualizes the components very nicely:
 
 ### My Parameter
 
-I used manual tuning for parameter optimization. My parameter are:
+I used manual tuning for parameter optimization. I started with the following parameters:
+``` c++
+  double Kp = 1;
+  double Ki = 1;
+  double Kd = 1;
+``` 
+
+I run the simulation with these parameters - The car started to turn to the left, leaving the road. Then it turned back to the road and leaving the road on the right side. Obviously these parameters were not optimal so I used a manual, twiddle-like approach by increasing / decreasing each single parameter and observed the results in the simulation. 
+
+**My final parameter are:**
 ``` c++
   double Kp = 0.2;
   double Ki = 0.0004;
